@@ -139,8 +139,7 @@ class HybridAuth extends HtmlElement implements ServiceLocatorAwareInterface
      */
     protected function getCurrentRoute()
     {
-        $route = $this->mvcEvent->getRouteMatch()->getMatchedRouteName();
-        return base64_encode($route);
+        return $this->mvcEvent->getRouteMatch()->getMatchedRouteName();
     }
 
     /**
